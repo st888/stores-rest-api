@@ -1,4 +1,4 @@
-from app import app
+from appSQLA import app
 from db import db
 
 db.init_app(app)

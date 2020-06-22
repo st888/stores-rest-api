@@ -17,7 +17,7 @@ class Det(Resource):
     def post(self):
         
         data=Det.parser.parse_args()
-        det=DetModel(project_id,data['project_id'],data['username'],data['instrument'],data['record'],data['redcap_event_name'],data['redcap_data_access_group'],data['redcap_repeat_instance'],data['redcap_repeat_instrument'],data['redcap_url'],data['project_url'])
+        det=DetModel(data['project_id'],data['username'],data['instrument'],data['record'],data['redcap_event_name'],data['redcap_data_access_group'],data['redcap_repeat_instance'],data['redcap_repeat_instrument'],data['redcap_url'],data['project_url'])
         
         try:
             det.save_to_db()
